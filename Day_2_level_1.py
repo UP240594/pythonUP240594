@@ -11,7 +11,7 @@ year=2025;
 is_married= False ;
 is_true=False;
 is_light_on= True;
-variable1,variable2,varibale3= 1,'cinco',True;
+x, y, z = True , 'oli' , 5
 
 """Excercises level 2"""
 
@@ -25,5 +25,10 @@ print(type(year));
 print(type(is_married));
 print(type(is_true));
 print(type(is_light_on));
-print(type(variable1,variable2,varibale3));
+print(type(x) , type (y) , type (z));
 
+print(len(first_name));
+print(len(last_name));
+#parte 4 del dia 2
+nume_one=5;
+num_two=4;
