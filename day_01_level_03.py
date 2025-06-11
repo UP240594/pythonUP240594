@@ -27,11 +27,11 @@ dy = y2 - y1  # 8 - 3 = 5
 dx_cuadrada = dx * dx     # 8 * 8 = 64
 dy_cuadrada = dy * dy     # 5 * 5 = 25
 
-# Suma de cuadrados
+#suma de c
 suma = dx_cuadrada + dy_cuadrada # 64 + 25 = 89
 
-# Calcular la raíz cuadrada 
+#raiz cuadrada
 distancia = suma ** 0.5
 
-# Mostrar resultado
-print("La distancia euclidiana es:", distancia)
+
+print("La distancia inclinada es:", distancia)
