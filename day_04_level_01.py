@@ -104,3 +104,20 @@ print(poposs)
 
 
 #19 me quede en el 19
+
+palabra2='Coding For All'
+
+splits=palabra2.split()
+
+p1=splits[0][0].upper()
+p2=splits[1][0].upper()
+p3=splits[2][0].upper()
+
+print(p1 + p2 +p3)
+
+#20
+
+print(palabra2.index('C'))
+
+#21
+
