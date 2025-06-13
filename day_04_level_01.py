@@ -121,3 +121,79 @@ print(palabra2.index('C'))
 
 #21
 
+print(palabra2.index('F'))
+
+
+#22
+
+
+word='Coding For All People'
+
+print(word.rfind('l'))
+
+#23
+
+sentences='You cannot end a sentence with because because because is a conjunction'
+
+print(sentences.index('because'))
+
+#24
+
+print(sentences.rindex('because'))
+
+#25
+
+
+
+print(sentences.replace('because because because', '').strip())
+
+
+#26
+
+print(sentences.index('because'))
+
+#27
+
+print(sentences.replace('because','').strip())
+
+#28
+
+
+print(palabra2.startswith('Coding'))
+
+#29
+
+print(palabra2.endswith('Coding'))
+
+#30
+
+
+pp='   Coding For All      ' 
+
+
+print(pp.replace('   ','').strip())
+
+#31
+
+
+variable1='30DaysOfPython'
+variable2='thirty_days_of_python'
+print(variable1.isidentifier())
+print(variable2.isidentifier())
+
+#The variable that returns true is thirty_days_of_python
+
+#32
+
+lists=['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+
+
+
+
+
+
+
+
+
+
+
