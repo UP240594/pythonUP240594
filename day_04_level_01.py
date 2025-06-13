@@ -76,7 +76,7 @@ print(palabra.split(' '))
 
 cosas="Facebook  ,Google , Microsoft , Apple , IBM , Oracle, Amazon"
 
-print(cosas.split('  '))
+print(cosas.split(' , '))
 
 #15
 
@@ -162,38 +162,54 @@ print(sentences.replace('because','').strip())
 print(palabra2.startswith('Coding'))
 
 #29
-
 print(palabra2.endswith('Coding'))
-
 #30
-
-
 pp='   Coding For All      ' 
-
-
 print(pp.replace('   ','').strip())
-
 #31
-
-
 variable1='30DaysOfPython'
 variable2='thirty_days_of_python'
 print(variable1.isidentifier())
 print(variable2.isidentifier())
-
 #The variable that returns true is thirty_days_of_python
 
 #32
-
 lists=['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+result=' / '.join(lists)
+print(result)
+#33
+texto=print( 'I am enjoying this challenge. \n I just wonder what is next')
+#34
+
+print('I hope everyone is enjoying the Python Challenge.\nAre you ?') # line break
+print('Name\tAge\tCountry\tCity') # adding tab space or 4 spaces 
+print('Asabeneh\t250\tFinland')
+print('Helsinki\t\t')
+#35
 
 
+first_name = 'Olivia'
+last_name = 'Chairez'
+language = 'Python'
+formated_string = 'I am {} {}. I teach {}'.format(first_name, last_name, language)
+print(formated_string)
+a = 10
+b = (3,14 * a ** 2 )
 
 
+print('The area Of the Circle with radius {} is {} '.format( a ,  b))
 
 
+#36
 
+a=8
+b=6
 
-
-
+print('{}+{} = {}'.format(a,b,a+b))
+print('{}-{} = {}'.format(a,b,a-b))
+print('{}*{} = {}'.format(a,b,a*b))
+print('{}/{} = {}'.format(a,b,a/b))
+print('{}%{} = {}'.format(a,b,a%b))
+print('{}//{} = {}'.format(a,b,a//b))
+print('{}**{} = {}'.format(a,b,a**b))
 
