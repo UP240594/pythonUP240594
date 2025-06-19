@@ -181,10 +181,10 @@ print(result)
 texto=print( 'I am enjoying this challenge. \n I just wonder what is next')
 #34
 
-print('I hope everyone is enjoying the Python Challenge.\nAre you ?') # line break
+
 print('Name\tAge\tCountry\tCity') # adding tab space or 4 spaces 
-print('Asabeneh\t250\tFinland')
-print('Helsinki\t\t')
+print('Asabeneh\t250\tFinland,\tHelsink')
+
 #35
 
 
