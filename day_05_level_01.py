@@ -15,7 +15,9 @@ print(it_companies)
 #8
 print(len(it_companies))
 #9
-print(it_companies[0],it_companies[4],it_companies[6])
+middle=len(it_companies) //2
+print(middle)
+print(it_companies[0],it_companies[middle],it_companies[6])
 #10
 it_companies[2]='Xampp'
 print(it_companies)
@@ -23,4 +25,14 @@ print(it_companies)
 it_companies.insert(4,'Brave')
 print(it_companies)
 #12
+it_companies.insert(4,'Office')
+print(it_companies)
+#13
+"""if 'IBM 'is in it_companies
+    
+    else
 
+
+del it_companies['4']
+it_companies[0]='Idk'
+print(it_companies .upper()) """
