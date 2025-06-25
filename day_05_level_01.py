@@ -28,11 +28,16 @@ print(it_companies)
 it_companies.insert(4,'Office')
 print(it_companies)
 #13
-"""if 'IBM 'is in it_companies
-    
-    else
+it_companies.remove('IBM')
+print(it_companies)
+#14
+popos='#;  '.join(it_companies)
+print(popos)
+#15
+popo= 'Facebook' in it_companies
+print(popo)
+#16
+it_companies.sort(reverse=True)
+print(it_companies)
+#17
 
-
-del it_companies['4']
-it_companies[0]='Idk'
-print(it_companies .upper()) """
