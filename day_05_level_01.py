@@ -40,4 +40,40 @@ print(popo)
 it_companies.sort(reverse=True)
 print(it_companies)
 #17
-
+it_companies.reverse()
+print(it_companies)
+#18
+p=it_companies[:3]
+print(p)
+#19
+p=it_companies[-3:]
+print(p)
+#20
+i=it_companies[3:-3]
+print(i)
+#21
+it_companies.remove('Facebook')
+print(it_companies)
+#22
+middles=it_companies[3:-3]
+it_companies.remove('Google')
+print(it_companies)
+#23
+last=it_companies[0:5]
+it_companies.remove('Xampp')
+print(it_companies)
+#24
+it_companies.clear()
+print(it_companies)
+#25
+del it_companies
+#26
+front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+back_end = ['Node','Express', 'MongoDB']
+join=front_end + back_end
+print(join)
+#27
+full_stack=front_end + back_end
+full_stack.insert(5, 'Python')
+full_stack.insert(6, 'SQL')
+print(full_stack)
