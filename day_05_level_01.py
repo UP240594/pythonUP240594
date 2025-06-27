@@ -28,6 +28,7 @@ print(it_companies)
 it_companies.insert(4,'Office')
 print(it_companies)
 #13
+print(it_companies[2].upper())
 it_companies.remove('IBM')
 print(it_companies)
 #14
