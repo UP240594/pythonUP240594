@@ -22,4 +22,3 @@ print(operation)
 q=ages .sort(reverse=True)
 print(q)
 #punto6
-print(abs(q[0]), abs(v[0]))
