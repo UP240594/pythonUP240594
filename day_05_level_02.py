@@ -21,4 +21,4 @@ print(operation)
 #punto5
 q=ages .sort(reverse=True)
 print(q)
-#punto6
+#punto 6
