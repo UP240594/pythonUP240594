@@ -4,6 +4,9 @@
 ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
 v=ages .sort()
 print(v)
+minu=min(ages)
+maxi=max(ages)
+print(minu , maxi)
 #punto2
 ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
 ages .insert(1,19)
