@@ -65,7 +65,9 @@ print( len(age) ,len(age1) )
 #3
 randomWord='I am a teacher and I love to inspire and teach people. '
 splited=randomWord.split()
-print(len(splited))
+valorSinreducir=len(splited)
+splitedReal=valorSinreducir-1
+print(splitedReal, ' Es su valor real')
 
 
 

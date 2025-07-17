@@ -1,1 +1,50 @@
+#1, 2
+dog={
+    'Name':'Olivia', 
+     'Color':'Red',
+     'Breed':'Owl',
+     'legs':'False',
+     'age':18}
+#3
+student={
+    'first_name':'Pepe',
+    'last_name':'Popo',
+    'gender':'M',
+    'age':67,
+    'Marital_Status':'Alone',
+    'Skills':['JS','PHP','C++','Python'],
+    'Country':'Suiza',
+    'city':'qwertys',
+    'address':'poposnd8181'
+}
 
+#4
+print(len(student))
+#5
+print(student['address'])
+print(student['Skills'])
+print(student['city'])
+print(student['Country'])
+print(student['Marital_Status'])
+print(student['age'])
+print(student['gender'])
+print(student['first_name'])
+print(student['last_name'])
+
+#6
+student['Skills']='APACHE','OS'
+print(student)
+#7
+keys=student.keys()
+print(keys)
+#8
+values=student.values()
+print(values)
+#9
+item=student.items()
+print(item)
+#10
+student.pop('address')
+print(student)
+#11
+del dog
