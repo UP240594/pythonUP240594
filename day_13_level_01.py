@@ -44,3 +44,5 @@ intercept = lambda x, y, m: y - m * x
 print("#7:")
 print("Pendiente:", slope(1, 2, 3, 6))     # 2.0
 print("Intersección en y:", intercept(3, 6, 2))  # 0
+
+#termine
