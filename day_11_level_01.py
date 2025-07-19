@@ -1,96 +1,133 @@
-#1 Suma de dos números
-def sumar_dos_numeros(a, b):
+# 1. Declarar una función que suma dos números
+def add_two_numbers(a, b):
     return a + b
 
-#2 Área de un círculo
+print("#1:", add_two_numbers(3, 4))  # 7
+
+# 2. Calcular el área de un círculo
 import math
-def area_circulo(radio):
+
+def area_of_circle(radio):
     return math.pi * radio * radio
 
-#3 Sumar todos los números, validando que sean numéricos
-def sumar_todos_numeros(*args):
-    for valor in args:
-        if not isinstance(valor, (int, float)):
-            return "Error: Todos los elementos deben ser números"
-    return sum(args)
+print("#2:", area_of_circle(5))  # 78.54 aprox
 
-#4 Convertir Celsius a Fahrenheit
-def convertir_celsius_a_fahrenheit(celsius):
-    return (celsius * 9/5) + 32
+# 3. Sumar todos los argumentos (verificando que sean números)
+def add_all_nums(*args):
+    suma = 0
+    for arg in args:
+        if not isinstance(arg, (int, float)):
+            return "Todos los elementos deben ser números."
+        suma += arg
+    return suma
 
-#5 Determinar estación según el mes
-def verificar_estacion(mes):
+print("#3:", add_all_nums(1, 2, 3, 4))  # 10
+print("#3:", add_all_nums(1, 'a', 3))  # Error
+
+# 4. Convertir °C a °F
+def convert_celsius_to_fahrenheit(c):
+    return (c * 9/5) + 32
+
+print("#4:", convert_celsius_to_fahrenheit(0))    # 32.0
+print("#4:", convert_celsius_to_fahrenheit(100))  # 212.0
+
+# 5. Determinar la estación del año según el mes
+def check_season(mes):
     mes = mes.lower()
-    if mes in ['septiembre', 'octubre', 'noviembre']:
-        return 'Otoño'
-    elif mes in ['diciembre', 'enero', 'febrero']:
+    if mes in ['diciembre', 'enero', 'febrero']:
         return 'Invierno'
     elif mes in ['marzo', 'abril', 'mayo']:
         return 'Primavera'
     elif mes in ['junio', 'julio', 'agosto']:
         return 'Verano'
+    elif mes in ['septiembre', 'octubre', 'noviembre']:
+        return 'Otoño'
     else:
         return 'Mes inválido'
 
-#6 Calcular pendiente de una recta dados dos puntos (x1, y1), (x2, y2)
-def calcular_pendiente(x1, y1, x2, y2):
-    if x2 == x1:
-        return 'Pendiente indefinida (división por cero)'
+print("#5:", check_season('Enero'))  # Invierno
+
+# 6. Calcular la pendiente de una ecuación lineal
+def calculate_slope(x1, y1, x2, y2):
+    if x2 - x1 == 0:
+        return "Pendiente indefinida"
     return (y2 - y1) / (x2 - x1)
 
-#7 Resolver ecuación cuadrática ax^2 + bx + c = 0
-import math
-def resolver_cuadratica(a, b, c):
+print("#6:", calculate_slope(1, 2, 3, 6))  # 2.0
+
+# 7. Resolver una ecuación cuadrática
+def solve_quadratic_eqn(a, b, c):
     discriminante = b**2 - 4*a*c
     if discriminante < 0:
         return "No hay soluciones reales"
-    x1 = (-b + math.sqrt(discriminante)) / (2*a)
-    x2 = (-b - math.sqrt(discriminante)) / (2*a)
-    return x1, x2
+    elif discriminante == 0:
+        x = -b / (2*a)
+        return (x,)
+    else:
+        x1 = (-b + math.sqrt(discriminante)) / (2*a)
+        x2 = (-b - math.sqrt(discriminante)) / (2*a)
+        return (x1, x2)
 
-#8 Imprimir cada elemento de una lista
-def imprimir_lista(lista):
-    for elemento in lista:
-        print(elemento)
+print("#7:", solve_quadratic_eqn(1, -3, 2))  # (2.0, 1.0)
 
-#9 Invertir una lista usando bucle
-def invertir_lista(lista):
-    lista_invertida = []
-    for elemento in lista:
-        lista_invertida.insert(0, elemento)
-    return lista_invertida
+# 8. Imprimir elementos de una lista
+def print_list(lista):
+    for item in lista:
+        print(item)
 
-#10 Capitalizar los elementos de una lista
-def capitalizar_lista(lista):
-    return [elemento.capitalize() for elemento in lista]
+print("#8:")
+print_list(['a', 'b', 'c'])
 
-#11 Agregar un elemento al final de una lista
-def agregar_elemento(lista, elemento):
-    lista.append(elemento)
-    return lista
+# 9. Invertir una lista usando bucles
+def reverse_list(arr):
+    reversed_arr = []
+    for i in range(len(arr)-1, -1, -1):
+        reversed_arr.append(arr[i])
+    return reversed_arr
 
-#12 Remover un elemento de una lista
-def remover_elemento(lista, elemento):
-    if elemento in lista:
-        lista.remove(elemento)
-    return lista
+print("#9:", reverse_list([1, 2, 3, 4, 5]))  # [5, 4, 3, 2, 1]
+print("#9:", reverse_list(["A", "B", "C"]))  # ["C", "B", "A"]
 
-#13 Sumar números del 1 hasta n
-def suma_numeros(n):
-    return sum(range(1, n+1))
+# 10. Capitalizar elementos de una lista
+def capitalize_list_items(lista):
+    return [item.capitalize() for item in lista]
 
-#14 Sumar todos los números impares desde 1 hasta n
-def suma_impares(n):
-    suma = 0
-    for numero in range(1, n+1):
-        if numero % 2 != 0:
-            suma += numero
-    return suma
+print("#10:", capitalize_list_items(['tomato', 'potato', 'apple']))  # ['Tomato', 'Potato', 'Apple']
 
-#15 Sumar todos los números pares desde 1 hasta n
-def suma_pares(n):
-    suma = 0
-    for numero in range(1, n+1):
-        if numero % 2 == 0:
-            suma += numero
-    return suma
+# 11. Agregar un ítem a una lista
+def add_item(lista, item):
+    return lista + [item]
+
+food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
+print("#11:", add_item(food_staff, 'Meat'))  # ['Potato', 'Tomato', 'Mango', 'Milk', 'Meat']
+numbers = [2, 3, 7, 9]
+print("#11:", add_item(numbers, 5))  # [2, 3, 7, 9, 5]
+
+# 12. Eliminar un ítem de una lista
+def remove_item(lista, item):
+    return [i for i in lista if i != item]
+
+food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
+print("#12:", remove_item(food_staff, 'Mango'))  # ['Potato', 'Tomato', 'Milk']
+numbers = [2, 3, 7, 9]
+print("#12:", remove_item(numbers, 3))  # [2, 7, 9]
+
+# 13. Suma de números del 1 al n
+def sum_of_numbers(n):
+    return sum(range(n + 1))
+
+print("#13:", sum_of_numbers(5))    # 15
+print("#13:", sum_of_numbers(10))   # 55
+print("#13:", sum_of_numbers(100))  # 5050
+
+# 14. Suma de impares en un rango
+def sum_of_odds(n):
+    return sum(i for i in range(n + 1) if i % 2 != 0)
+
+print("#14:", sum_of_odds(10))  # 25
+
+# 15. Suma de pares en un rango
+def sum_of_even(n):
+    return sum(i for i in range(n + 1) if i % 2 == 0)
+
+print("#15:", sum_of_even(10))  # 30
