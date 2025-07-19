@@ -48,19 +48,31 @@ def is_valid_python_variable(name):
         return False
     if keyword.iskeyword(name):
         return False
-    # Regex: comienza con letra o guion bajo, seguido de letras, guiones bajos o dígitos
     return re.match(r'^[A-Za-z_][A-Za-z0-9_]*$', name) is not None
 
 print("#4:", is_valid_python_variable("variable1"))  # True
 print("#4:", is_valid_python_variable("1variable"))  # False
 print("#4:", is_valid_python_variable("for"))        # False
 
+# 5 y 6. Datos incluidos directamente en el archivo
+countries = [
+    {'name': 'China', 'languages': ['Chinese'], 'population': 1402112000},
+    {'name': 'India', 'languages': ['Hindi', 'English'], 'population': 1359930000},
+    {'name': 'United States', 'languages': ['English'], 'population': 329256000},
+    {'name': 'Indonesia', 'languages': ['Indonesian'], 'population': 268074600},
+    {'name': 'Brazil', 'languages': ['Portuguese'], 'population': 211715000},
+    {'name': 'Pakistan', 'languages': ['Urdu', 'English'], 'population': 216565000},
+    {'name': 'Nigeria', 'languages': ['English'], 'population': 200963000},
+    {'name': 'Russia', 'languages': ['Russian'], 'population': 146793744},
+    {'name': 'Bangladesh', 'languages': ['Bengali'], 'population': 168304408},
+    {'name': 'Mexico', 'languages': ['Spanish'], 'population': 126190788},
+    {'name': 'Germany', 'languages': ['German'], 'population': 83019200},
+    {'name': 'France', 'languages': ['French'], 'population': 67060000},
+    {'name': 'Spain', 'languages': ['Spanish'], 'population': 47329981},
+    {'name': 'Canada', 'languages': ['English', 'French'], 'population': 38008005},
+]
 
-
-# Importar datos
-from data.countries_data import countries  # Ajustar al path correcto
-
-# 5. Idiomas más hablados en el mundo (top 10)
+# 5. Idiomas más hablados en el mundo (por número de países donde se habla)
 def most_spoken_languages(n=10):
     """
     Devuelve una lista de tuplas (idioma, cantidad_de_países) con los n idiomas más hablados,
@@ -81,9 +93,7 @@ def most_populated_countries(n=10):
     Devuelve una lista de tuplas (país, población) con los n países más poblados,
     ordenados de mayor a menor población.
     """
-    # Asumimos 'population' es un entero
     ordenados = sorted(countries, key=lambda p: p.get('population', 0), reverse=True)
     return [(p['name'], p['population']) for p in ordenados[:n]]
 
 print("#6:", most_populated_countries(10))
-# Ejemplo: [('China', 1402112000), ('India', 1359930000), ...]
